@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Fuel_app</string>
+    <string-array name="fuel_station">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Python</item>
+        <item>CPP</item>
+    </string-array>
 </resources>
