@@ -10,6 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fuel_app">
         <activity
+            android:name=".Add_checkout_time"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Add_checkin_time"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Queue_home"
             android:exported="false">
             <meta-data
