@@ -9,8 +9,8 @@
 
     <ImageView
         android:layout_width="500dp"
-        android:layout_height="350dp"
-        android:src="@drawable/image"/>
+        android:layout_height="282dp"
+        android:src="@drawable/image" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
         android:layout_width="350dp"
         android:layout_height="45dp"
         android:background="@drawable/forget"
-        android:text="Vehicle Type - Fuel Type"
+        android:text="Vehicle Type / Fuel Type"
         android:textColor="#95120a"
         android:textStyle="bold"
         android:textSize="18dp"
@@ -54,6 +54,17 @@
         android:layout_marginTop="20dp"
         android:paddingLeft="20dp"/>
 
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:background="@drawable/forget"
+        android:text="Password"
+        android:textColor="#95120a"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"/>
+
     <Button
         android:layout_width="350dp"
         android:layout_height="50dp"
@@ -63,6 +74,7 @@
         android:textStyle="bold"
         android:textColor="#FFF"
         android:layout_marginTop="25dp"/>
+
 
     <TextView
         android:layout_width="wrap_content"

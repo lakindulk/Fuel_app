@@ -26,7 +26,7 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/forget"
         android:paddingLeft="20dp"
-        android:text="Email"
+        android:text="Vehicle Number"
         android:textColor="#95120a"
         android:textSize="18dp"
         android:textStyle="bold" />
