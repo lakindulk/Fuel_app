@@ -30,6 +30,7 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/vehicleowner"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:background="@drawable/button"
@@ -40,6 +41,7 @@
         android:layout_marginTop="40dp"/>
 
     <Button
+        android:id="@+id/stationowner"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:background="@drawable/button"
