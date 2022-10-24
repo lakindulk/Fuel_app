@@ -14,16 +14,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_register);
 
-        qHomeBtn = findViewById(R.id.qbtn);
+        //qHomeBtn = findViewById(R.id.qbtn);
 
-        qHomeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,Queue_home.class);
-                startActivity(intent);
-            }
-        });
+//        qHomeBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this,Queue_home.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }
