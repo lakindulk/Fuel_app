@@ -27,6 +27,7 @@
         android:background="@drawable/forget"
         android:paddingLeft="20dp"
         android:hint="Vehicle Number"
+        android:drawableStart="@drawable/ic_email"
         android:textColor="#95120a"
         android:textSize="18dp"
         android:textStyle="bold" />
@@ -38,6 +39,7 @@
         android:background="@drawable/forget"
         android:paddingLeft="20dp"
         android:hint="Password"
+        android:drawableStart="@drawable/ic_lock"
         android:textColor="#95120a"
         android:textSize="18dp"
         android:textStyle="bold" />
