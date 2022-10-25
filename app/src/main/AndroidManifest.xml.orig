@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.fuel_app">
+<<<<<<< HEAD
 
     <uses-permission android:name="android.permission.INTERNET" />
+=======
+>>>>>>> origin/main
 
     <application
         android:allowBackup="true"
@@ -10,30 +13,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+<<<<<<< HEAD
         android:theme="@style/Theme.Fuel_app"
         android:usesCleartextTraffic="true">
         <activity
             android:name=".Custom_list_view"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".ViewFuelStation"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+=======
+        android:theme="@style/Theme.Fuel_app">
         <activity
             android:name=".ViewcountActivity"
+>>>>>>> origin/main
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
+<<<<<<< HEAD
+            android:name=".ViewFuelStation"
+=======
             android:name=".ViewallActivity"
             android:exported="false">
             <meta-data
@@ -56,6 +54,7 @@
         </activity>
         <activity
             android:name=".FueltypeMainActivity"
+>>>>>>> origin/main
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

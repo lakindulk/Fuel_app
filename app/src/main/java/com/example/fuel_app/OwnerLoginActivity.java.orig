@@ -19,9 +19,14 @@ public class OwnerLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_owner_login);
 
         signinbtn = findViewById(R.id.ownersignup);
-        login =findViewById(R.id.login);
+<<<<<<< HEAD
 
+
+        signinbtn.setOnClickListener(new View.OnClickListener() {
+=======
+        login =findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
+>>>>>>> origin/main
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(OwnerLoginActivity.this,FueltypeMainActivity.class);

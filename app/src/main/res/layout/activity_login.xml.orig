@@ -56,7 +56,11 @@
         android:layout_marginRight="35dp"/>
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/vehicleLoginBtn"
+=======
+        android:id="@+id/login"
+>>>>>>> origin/main
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"

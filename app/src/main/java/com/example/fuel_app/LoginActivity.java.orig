@@ -12,9 +12,13 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity {
 
     TextView signinbtn;
+<<<<<<< HEAD
     Button vehicleLoginButton;
-    Button login;
+
     @SuppressLint("MissingInflatedId")
+=======
+    Button login;
+>>>>>>> origin/main
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
