@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdddailyvehiclecountActivity">
+
+    <View
+        android:id="@+id/textView2"
+        android:layout_width="340dp"
+        android:layout_height="502dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.602" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.03"
+        android:text="Add Daily Vehicle Count"
+        android:textColor="#B61F15"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <EditText
+        android:id="@+id/noOfFourweel"
+        android:layout_width="303dp"
+        android:layout_height="53dp"
+        android:background="@drawable/forget"
+        android:hint="Number Of Four Weels"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <EditText
+        android:id="@+id/noOfSixweel"
+        android:layout_width="303dp"
+        android:layout_height="53dp"
+        android:background="@drawable/forget"
+        android:hint="No Of Six Weel"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.342" />
+
+    <EditText
+        android:id="@+id/noOfThreeweel"
+        android:layout_width="303dp"
+        android:layout_height="53dp"
+        android:background="@drawable/forget"
+        android:hint="No Of Three Weels"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.532" />
+
+    <EditText
+        android:id="@+id/noOfTwoweel"
+        android:layout_width="303dp"
+        android:layout_height="53dp"
+        android:background="@drawable/forget"
+        android:hint="No Of Two Weel"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.723" />
+
+    <Button
+        android:id="@+id/addcount"
+        android:layout_width="258dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button"
+        android:text="Add/Edit "
+        android:textColor="#FFF"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.911" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
