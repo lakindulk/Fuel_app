@@ -56,14 +56,15 @@
         android:layout_marginRight="35dp"/>
 
     <Button
+        android:id="@+id/vehicleLoginBtn"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button"
         android:text="Login"
-        android:textSize="18dp"
-        android:textStyle="bold"
         android:textColor="#FFF"
-        android:layout_marginTop="20dp"/>
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/signup"
