@@ -21,7 +21,7 @@ public class OwnerRegistrationActivity extends AppCompatActivity {
         signinbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(OwnerRegistrationActivity.this,OwnerLoginActivity.class);
+                Intent intent = new Intent(OwnerRegistrationActivity.this,FueltypeMainActivity.class);
                 startActivity(intent);
             }
         });
