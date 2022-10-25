@@ -13,28 +13,21 @@ public class LoginActivity extends AppCompatActivity {
 
     TextView signinbtn;
     Button vehicleLoginButton;
-    Button login;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        login=findViewById(R.id.login);
+
         signinbtn = findViewById(R.id.signup);
         vehicleLoginButton = findViewById(R.id.vehicleLoginBtn);
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,FueltypeMainActivity.class);
-                startActivity(intent);
-            }
-        });
 
         vehicleLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,ViewFuelStation.class);
+                Intent intent = new Intent(LoginActivity.this,Home_Screen.class);
                 startActivity(intent);
             }
         });
