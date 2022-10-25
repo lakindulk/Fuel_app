@@ -9,7 +9,7 @@
 
     <ImageView
         android:layout_width="500dp"
-        android:layout_height="152dp"
+        android:layout_height="139dp"
         android:src="@drawable/fuel" />
 
     <TextView

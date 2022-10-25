@@ -8,9 +8,9 @@
 
     <ImageView
         android:layout_width="500dp"
-        android:layout_height="350dp"
-        android:src="@drawable/fuel"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="251dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/fuel" />
 
     <TextView
         android:layout_width="wrap_content"
