@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias="0.85" />
 
     <Button
         android:id="@+id/deletstock"
@@ -36,12 +36,12 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.944" />
+        app:layout_constraintVertical_bias="0.968" />
 
     <View
         android:id="@+id/textView2"
-        android:layout_width="339dp"
-        android:layout_height="550dp"
+        android:layout_width="352dp"
+        android:layout_height="563dp"
         android:layout_centerInParent="true"
         android:background="@drawable/border"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,14 +57,14 @@
         android:letterSpacing="0.03"
         android:text="Add Fuel Stock"
         android:textColor="#B61F15"
-        android:textSize="30dp"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <EditText
         android:id="@+id/stationid"
@@ -80,31 +80,82 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.053" />
 
     <EditText
-        android:id="@+id/fueltype"
-        android:layout_width="303dp"
-        android:layout_height="57dp"
+        android:id="@+id/petrol92"
+        android:layout_width="146dp"
+        android:layout_height="54dp"
         android:background="@drawable/forget"
-        android:hint="Fuel Type"
+        android:hint="Petrol-92"
         android:paddingLeft="20dp"
         android:textColor="#95120a"
         android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.221" />
+        app:layout_constraintVertical_bias="0.328" />
 
     <EditText
-        android:id="@+id/capacity"
+        android:id="@+id/diesel"
+        android:layout_width="153dp"
+        android:layout_height="55dp"
+        android:background="@drawable/forget"
+        android:hint="Diesel"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.462" />
+
+    <EditText
+        android:id="@+id/petrol95"
+        android:layout_width="139dp"
+        android:layout_height="57dp"
+        android:background="@drawable/forget"
+        android:hint="Petrol-95"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.33" />
+
+    <EditText
+        android:id="@+id/superdiesel"
+        android:layout_width="140dp"
+        android:layout_height="54dp"
+        android:background="@drawable/forget"
+        android:hint="Sup-Diesel"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <EditText
+        android:id="@+id/type"
         android:layout_width="303dp"
         android:layout_height="57dp"
         android:background="@drawable/forget"
-        android:hint="Capacity"
+        android:hint="City"
         android:paddingLeft="20dp"
         android:textColor="#95120a"
         android:textSize="18dp"
@@ -113,7 +164,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.381" />
+        app:layout_constraintVertical_bias="0.193" />
 
     <EditText
         android:id="@+id/finishtime"
@@ -127,9 +178,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.697" />
+        app:layout_constraintVertical_bias="0.729" />
 
     <EditText
         android:id="@+id/arrivaltime"
@@ -145,7 +197,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.537" />
+        app:layout_constraintVertical_bias="0.59" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

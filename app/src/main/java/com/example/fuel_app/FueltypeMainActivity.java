@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class FueltypeMainActivity extends AppCompatActivity {
-    Button viewall,viewcount,addstock,addcount,usermana;
+
+    Button viewall,addstock,addcount,usermana;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +18,6 @@ public class FueltypeMainActivity extends AppCompatActivity {
 
         usermana = findViewById(R.id.usermanagement);
         viewall = findViewById(R.id.fueltype_viewall);
-        viewcount = findViewById(R.id.fueltype_view);
         addstock = findViewById(R.id.fueltype_addfuel);
         addcount = findViewById(R.id.daily_count);
 
@@ -34,12 +35,7 @@ public class FueltypeMainActivity extends AppCompatActivity {
             }
         });
 
-        viewcount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(FueltypeMainActivity.this, ViewcountActivity.class));
-            }
-        });
+
 
         addstock.setOnClickListener(new View.OnClickListener() {
             @Override
