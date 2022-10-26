@@ -29,7 +29,7 @@ Context context;
         System.out.println("Get All Fuel Type");
         ArrayList<FuelTypeModel> fuelTypeList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url ="http://192.168.1.5:8080/api/FuelTypeUpdate";
+        String url ="http://192.168.1.5:8090/api/FuelTypeUpdate";
         JsonArrayRequest request =new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -42,7 +42,10 @@ Context context;
                         typeModel.setId(first_data.getString("id"));
                         typeModel.setStationID(first_data.getString("stationID"));
                         typeModel.setFuelType(first_data.getString("fuelType"));
-                        typeModel.setCapacity(first_data.getString("capacity"));
+                        typeModel.setPetrol92(first_data.getString("petrol92"));
+                        typeModel.setPetrol95(first_data.getString("petrol95"));
+                        typeModel.setDiesel(first_data.getString("diesel"));
+                        typeModel.setSuperDiesel(first_data.getString("superDiesel"));
                         typeModel.setArrivalTime(first_data.getString("arrivalTime"));
                         typeModel.setFinishTime(first_data.getString("finishTime"));
                         typeModel.setNoOfFourweel(first_data.getString("noOfFourweel"));

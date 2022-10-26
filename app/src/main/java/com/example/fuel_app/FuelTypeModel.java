@@ -5,22 +5,27 @@ public class FuelTypeModel {
 
     private String id;
     private String stationID;
-    private String capacity;
+    private String petrol92;
     private String  fuelType;
     private String arrivalTime;
     private String finishTime;
     private String noOfFourweel;
     private String noOfSixweel;
-
-
     private String noOfThreeweel;
     private String noOfTwoweel;
+    private String petrol95;
+    private String superDiesel;
+    private String diesel;
 
 
-    public FuelTypeModel(String id, String stationID, String capacity, String fuelType, String arrivalTime, String finishTime, String noOfFourweel, String noOfSixweel, String noOfThreeweel, String noOfTwoweel) {
+    public void setDiesel(String diesel) {
+        this.diesel = diesel;
+    }
+
+    public FuelTypeModel(String petrol95, String superDiesel, String diesel, String id, String stationID, String petrol92, String fuelType, String arrivalTime, String finishTime, String noOfFourweel, String noOfSixweel, String noOfThreeweel, String noOfTwoweel) {
         this.id = id;
         this.stationID = stationID;
-        this.capacity = capacity;
+        this.petrol92 = petrol92;
         this.fuelType = fuelType;
         this.arrivalTime = arrivalTime;
         this.finishTime = finishTime;
@@ -28,6 +33,10 @@ public class FuelTypeModel {
         this.noOfSixweel = noOfSixweel;
         this.noOfThreeweel = noOfThreeweel;
         this.noOfTwoweel = noOfTwoweel;
+        this.petrol95 = petrol95;
+        this.diesel = diesel;
+        this.superDiesel = superDiesel;
+
     }
     public FuelTypeModel() {
     }
@@ -37,7 +46,10 @@ public class FuelTypeModel {
         return "FuelTypeModel{"+
                 "id='"+id+'\''+
                 ", stationID='"+stationID+'\''+
-                ", capacity='"+capacity+'\''+
+                ", petrol92='"+petrol92+'\''+
+                ", petrol95='"+petrol95+'\''+
+                ", diesel='"+diesel+'\''+
+                ", superDiesel='"+superDiesel+'\''+
                 ", fuelType='"+fuelType+'\''+
                 ", arrivalTime='"+arrivalTime+'\''+
                 ", finishTime='"+finishTime+'\''+
@@ -51,8 +63,8 @@ public class FuelTypeModel {
     public String getId() {
         return id;
     }
-    public String getCapacity() {
-        return capacity;
+    public String getPetrol92() {
+        return petrol92;
     }
 
     public String getFuelType() {
@@ -83,6 +95,25 @@ public class FuelTypeModel {
         return noOfTwoweel;
     }
 
+    public String getPetrol95() {
+        return petrol95;
+    }
+
+    public void setPetrol95(String petrol95) {
+        this.petrol95 = petrol95;
+    }
+
+    public String getSuperDiesel() {
+        return superDiesel;
+    }
+
+    public void setSuperDiesel(String superDiesel) {
+        this.superDiesel = superDiesel;
+    }
+
+    public String getDiesel() {
+        return diesel;
+    }
     public void setId(String id) {
         this.id = id;
     }
@@ -96,8 +127,8 @@ public class FuelTypeModel {
     }
 
 
-    public void setCapacity(String capacity) {
-        this.capacity = capacity;
+    public void setPetrol92(String petrol92) {
+        this.petrol92 = petrol92;
     }
 
 

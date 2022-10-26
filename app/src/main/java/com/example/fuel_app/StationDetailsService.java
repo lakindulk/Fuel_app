@@ -31,7 +31,7 @@ public class StationDetailsService {
         System.out.println("inside get all");
         ArrayList<FuelStationModel> stationModelList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url = "http://192.168.1.5:8080/api/Owner";
+        String url = "http://192.168.1.5:8090/api/Owner";
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
