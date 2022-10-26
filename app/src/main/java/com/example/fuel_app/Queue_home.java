@@ -26,7 +26,7 @@ public class Queue_home extends AppCompatActivity {
         if(intent != null){
             id = intent.getStringExtra("ID");
         }
-
+        System.out.println("id : " + id);
         checkIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

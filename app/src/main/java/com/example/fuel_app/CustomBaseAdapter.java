@@ -27,19 +27,19 @@ public class CustomBaseAdapter extends ArrayAdapter<FuelStationModel> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-
+        System.out.println("inside get view");
         FuelStationModel model = getItem(position);
 
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_custom_list_view,parent,false);
         }
 
-
+        System.out.println("station Name : " + model.getName());
         TextView stationName = convertView.findViewById(R.id.textView);
 
-        stationName.setText(model.getName());
+        stationName.setText(model.getStationName() + " - " +model.getCity());
 
-        //return convertView;
-      return super.getView(position, convertView, parent);
+        return convertView;
+      //return super.getView(position, convertView, parent);
     }
 }
