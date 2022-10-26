@@ -29,7 +29,7 @@ public class FuelTypeBasedAdapter extends ArrayAdapter<FuelTypeModel> {
         }
         System.out.println("station Name : " + model.getStationID());
         TextView stationName = convertView.findViewById(R.id.newfuelview);
-        stationName.setText(model.getStationID() );
+        stationName.setText(model.getStationID()+"-"+model.getFuelType() );
         return convertView;
 
     }
