@@ -4,8 +4,6 @@ public class FuelStationModel {
     private String id;
     private String stationName;
     private String city;
-    private String arrivaltime;
-    private String FinishTime;
     private String name;
 
     public String getName() {
@@ -16,12 +14,11 @@ public class FuelStationModel {
         this.name = name;
     }
 
-    public FuelStationModel(String id, String stationName, String city, String arrivaltime, String finishTime) {
+    public FuelStationModel(String id, String stationName, String city) {
         this.id = id;
         this.stationName = stationName;
         this.city = city;
-        this.arrivaltime = arrivaltime;
-        FinishTime = finishTime;
+
     }
 
     public FuelStationModel() {
@@ -33,8 +30,7 @@ public class FuelStationModel {
                 "id='" + id + '\'' +
                 ", stationName='" + stationName + '\'' +
                 ", city='" + city + '\'' +
-                ", arrivaltime='" + arrivaltime + '\'' +
-                ", FinishTime='" + FinishTime + '\'' +
+
                 '}';
     }
 
@@ -62,19 +58,5 @@ public class FuelStationModel {
         this.city = city;
     }
 
-    public String getArrivaltime() {
-        return arrivaltime;
-    }
 
-    public void setArrivaltime(String arrivaltime) {
-        this.arrivaltime = arrivaltime;
-    }
-
-    public String getFinishTime() {
-        return FinishTime;
-    }
-
-    public void setFinishTime(String finishTime) {
-        FinishTime = finishTime;
-    }
 }
