@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
+//this class is to handle all business logics
 public class Queue_home extends AppCompatActivity {
     Button checkIn;
     String id;

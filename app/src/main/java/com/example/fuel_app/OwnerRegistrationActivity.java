@@ -21,7 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
-
+//this class is to handle all business logics
 public class OwnerRegistrationActivity extends AppCompatActivity {
 
     Button ownerregi;

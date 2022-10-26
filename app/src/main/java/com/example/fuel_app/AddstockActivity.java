@@ -3,7 +3,7 @@ package com.example.fuel_app;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+//this class is to handle all business logics
 public class AddstockActivity extends AppCompatActivity {
 
     @Override

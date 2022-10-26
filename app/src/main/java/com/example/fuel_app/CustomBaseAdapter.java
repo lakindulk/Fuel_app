@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-
+// this class is to manage the list view in fuel stations
 public class CustomBaseAdapter extends ArrayAdapter<FuelStationModel> {
 
     //Reference: https://www.youtube.com/watch?v=RHqGiWluAzU&ab_channel=Foxandroid

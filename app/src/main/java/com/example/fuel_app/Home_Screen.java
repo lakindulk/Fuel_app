@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+//this class is to handle all business logics
 public class Home_Screen extends AppCompatActivity {
 
     Button fuelType, queue;

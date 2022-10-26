@@ -15,7 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
+// this service is to call the api
 public class StationDetailsService {
     Context context;
 
@@ -30,7 +30,7 @@ public class StationDetailsService {
 
 
 
-    public void getAllStations(VolleyResponseListener volleyResponseListener) {
+    public void getAllStations(VolleyResponseListener volleyResponseListener) { // get all fuel station details
         System.out.println("inside get all");
         ArrayList<FuelStationModel> stationModelList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(context);
@@ -78,7 +78,7 @@ public class StationDetailsService {
         void onResponse(StationDetailModel object);
         void onError(String message);
     }
-    public void getFuelDetails (UserDetailsResponseListener volleyResponseListener,String id) {
+    public void getFuelDetails (UserDetailsResponseListener volleyResponseListener,String id) { // fetch station details by id
         System.out.println("inside fuel station get method : " + id);
         RequestQueue queue = Volley.newRequestQueue(context);
         StationDetailModel stationModel = new StationDetailModel();
