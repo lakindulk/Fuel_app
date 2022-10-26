@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserManagementActivity">
+
+<Button
+    android:id="@+id/addstock"
+    android:layout_width="258dp"
+    android:layout_height="48dp"
+    android:background="@drawable/button"
+    android:text="Edit Details"
+    android:textColor="#FFF"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.496"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.828" />
+
+<Button
+    android:id="@+id/deletstock"
+    android:layout_width="258dp"
+    android:layout_height="48dp"
+    android:background="@drawable/button"
+    android:text="Delete Details"
+    android:textColor="#FFF"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.496"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.944" />
+
+<View
+    android:id="@+id/textView2"
+    android:layout_width="339dp"
+    android:layout_height="550dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/border"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.762" />
+
+<TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:letterSpacing="0.03"
+    android:text="Update User Details"
+    android:textColor="#B61F15"
+    android:textSize="30dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toTopOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.225"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.704" />
+
+<EditText
+    android:id="@+id/Name"
+    android:layout_width="303dp"
+    android:layout_height="57dp"
+    android:background="@drawable/forget"
+    android:hint="User Name"
+    android:paddingLeft="20dp"
+    android:textColor="#95120a"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.07" />
+
+<EditText
+    android:id="@+id/Password"
+    android:layout_width="303dp"
+    android:layout_height="57dp"
+    android:background="@drawable/forget"
+    android:hint="Password"
+    android:paddingLeft="20dp"
+    android:textColor="#95120a"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.49"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.221" />
+
+<EditText
+    android:id="@+id/Station"
+    android:layout_width="303dp"
+    android:layout_height="57dp"
+    android:background="@drawable/forget"
+    android:hint="Station Name"
+    android:paddingLeft="20dp"
+    android:textColor="#95120a"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.381" />
+
+<EditText
+    android:id="@+id/city"
+    android:layout_width="303dp"
+    android:layout_height="57dp"
+    android:background="@drawable/forget"
+    android:hint="City"
+    android:paddingLeft="20dp"
+    android:textColor="#95120a"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.697" />
+
+<EditText
+    android:id="@+id/Register"
+    android:layout_width="303dp"
+    android:layout_height="57dp"
+    android:background="@drawable/forget"
+    android:hint="Register Number"
+    android:paddingLeft="20dp"
+    android:textColor="#95120a"
+    android:textSize="18dp"
+    android:textStyle="bold"
+    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/textView2"
+    app:layout_constraintVertical_bias="0.537" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

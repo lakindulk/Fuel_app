@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Fuel_app"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".UserManagementActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Home_Screen"
             android:exported="false">
             <meta-data
