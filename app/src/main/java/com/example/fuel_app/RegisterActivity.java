@@ -21,7 +21,7 @@ package com.example.fuel_app;
         import org.json.JSONObject;
 
         import java.util.HashMap;
-
+//this class is to handle all business logics
 public class RegisterActivity extends AppCompatActivity {
 
     Button signinbtn;

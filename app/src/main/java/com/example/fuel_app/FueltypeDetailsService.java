@@ -14,7 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
+// this service is to manage api requests in fuel type api
 public class FueltypeDetailsService {
 Context context;
 

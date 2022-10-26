@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+//this class is to handle all business logics
 public class LoginActivity extends AppCompatActivity {
 
     TextView signinbtn;

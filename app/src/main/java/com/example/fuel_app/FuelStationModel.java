@@ -1,5 +1,5 @@
 package com.example.fuel_app;
-
+// this model handles the data objects related to the fuel station details model
 public class FuelStationModel {
     private String id;
     private String stationName;

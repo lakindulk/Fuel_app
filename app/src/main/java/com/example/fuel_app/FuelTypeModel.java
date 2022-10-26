@@ -1,5 +1,5 @@
 package com.example.fuel_app;
-
+// this model handles the data objects related to the fuel availability model
 public class FuelTypeModel {
 
 

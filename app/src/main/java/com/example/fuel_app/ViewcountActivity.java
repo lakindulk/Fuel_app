@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
+//this class is to handle all business logics
 public class ViewcountActivity extends AppCompatActivity {
     String id;
 

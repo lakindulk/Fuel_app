@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-
+//this class is to handle all business logics
 public class ViewallActivity extends AppCompatActivity {
     ListView typeList;
     FuelTypeBasedAdapter listAdapter;

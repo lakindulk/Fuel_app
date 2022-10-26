@@ -1,5 +1,5 @@
 package com.example.fuel_app;
-
+// manage the data related to the queue update
 public class StationUpdateModel {
 
     private String id;
