@@ -6,33 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ViewallActivity">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:letterSpacing="0.03"
-        android:text="View All Details"
-        android:textColor="#B61F15"
-        android:textSize="30dp"
-        android:textStyle="bold"
+
+    <ListView
+        android:id="@+id/newListView"
+        android:layout_width="390dp"
+        android:layout_height="598dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
-
-    <View
-        android:id="@+id/textView2"
-        android:layout_width="340dp"
-        android:layout_height="502dp"
-        android:layout_centerInParent="true"
-        android:background="@drawable/border"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.384" />
-
+        app:layout_constraintVertical_bias="0.496"
+        tools:listitem="@layout/activity_fueltype_listview" />
 </androidx.constraintlayout.widget.ConstraintLayout>
