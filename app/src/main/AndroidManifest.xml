@@ -20,13 +20,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".Custom_list_view"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".ViewFuelStation"
             android:exported="false">
             <meta-data

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,6 +30,8 @@ public class ViewFuelStation extends AppCompatActivity {
             @Override
             public void onResponse(ArrayList<FuelStationModel> stationModel) {
                 System.out.println("station data : " + stationModel);
+//                ArrayAdapter arr = new ArrayAdapter(ViewFuelStation.this, android.R.layout.simple_list_item_1,stationModel.get());
+
                 listAdapter = new CustomBaseAdapter(getApplicationContext(),stationModel);
                 stationList.setAdapter(listAdapter);
                 stationList.setClickable(true);
