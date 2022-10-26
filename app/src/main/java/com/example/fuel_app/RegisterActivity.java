@@ -10,7 +10,7 @@ package com.example.fuel_app;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    TextView signinbtn;
+    Button signinbtn;
 
 
     @Override
@@ -18,7 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        signinbtn = findViewById(R.id.alreadysignin);
+        signinbtn = findViewById(R.id.userregibtn);
 
         signinbtn.setOnClickListener(new View.OnClickListener() {
             @Override

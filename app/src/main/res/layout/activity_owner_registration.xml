@@ -79,6 +79,7 @@
 
 
     <Button
+        android:id="@+id/ownerregibtn"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:background="@drawable/button"

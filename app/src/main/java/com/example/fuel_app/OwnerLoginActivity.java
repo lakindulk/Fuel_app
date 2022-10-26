@@ -18,7 +18,6 @@ public class OwnerLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_owner_login);
 
-        signinbtn = findViewById(R.id.ownersignup);
         login =findViewById(R.id.login);
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -29,6 +28,15 @@ public class OwnerLoginActivity extends AppCompatActivity {
             }
         });
 
+        signinbtn = findViewById(R.id.ownersignup);
+
+        signinbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(OwnerLoginActivity.this,OwnerRegistrationActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
