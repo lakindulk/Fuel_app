@@ -22,60 +22,65 @@
         android:letterSpacing="0.03"/>
 
     <EditText
+        android:id="@+id/username"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/forget"
         android:hint="User Name"
+        android:paddingLeft="20dp"
         android:textColor="#95120a"
-        android:textStyle="bold"
         android:textSize="18dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"/>
+        android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/forget"
         android:hint="Password"
+        android:paddingLeft="20dp"
         android:textColor="#95120a"
-        android:textStyle="bold"
         android:textSize="18dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"/>
+        android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/stationname"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/forget"
         android:hint="Station Name"
+        android:paddingLeft="20dp"
         android:textColor="#95120a"
-        android:textStyle="bold"
         android:textSize="18dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"/>
+        android:textStyle="bold" />
 
 
     <EditText
+        android:id="@+id/registernumber"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/forget"
         android:hint="Register Number"
+        android:paddingLeft="20dp"
         android:textColor="#95120a"
-        android:textStyle="bold"
         android:textSize="18dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"/>
+        android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/city"
         android:layout_width="350dp"
         android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/forget"
         android:hint="City"
+        android:paddingLeft="20dp"
         android:textColor="#95120a"
-        android:textStyle="bold"
         android:textSize="18dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"/>
+        android:textStyle="bold" />
 
 
     <Button
