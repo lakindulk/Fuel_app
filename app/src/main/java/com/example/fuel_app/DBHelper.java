@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+// this class is to handle the sqlite login
 public class DBHelper extends SQLiteOpenHelper{
 
     public String USERTYPE;

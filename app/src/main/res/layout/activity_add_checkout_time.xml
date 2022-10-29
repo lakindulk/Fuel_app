@@ -62,7 +62,7 @@
         android:id="@+id/checkOut"
         android:layout_width="177dp"
         android:layout_height="53dp"
-        android:text="Button"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"

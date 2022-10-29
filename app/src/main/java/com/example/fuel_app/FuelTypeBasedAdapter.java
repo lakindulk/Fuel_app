@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
-
+//
 public class FuelTypeBasedAdapter extends ArrayAdapter<FuelTypeModel> {
     public FuelTypeBasedAdapter(@NonNull Context context, ArrayList<FuelTypeModel> fuelTypeModelArrayList){
         super(context,R.layout.activity_fueltype_listview,fuelTypeModelArrayList);
