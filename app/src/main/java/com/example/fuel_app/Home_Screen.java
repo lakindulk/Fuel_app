@@ -11,6 +11,7 @@ import android.widget.Button;
 public class Home_Screen extends AppCompatActivity {
 
     Button fuelType, queue;
+    String userId;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,12 @@ public class Home_Screen extends AppCompatActivity {
 
         fuelType = findViewById(R.id.fuelTypeBtn);
         queue = findViewById(R.id.queueBtn);
+
+
+        Intent intent = this.getIntent();
+        if(intent != null){
+            userId = intent.getStringExtra("user");
+        }
 
         fuelType.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,6 +39,7 @@ public class Home_Screen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Home_Screen.this,ViewFuelStation.class);
+                intent.putExtra("userId", userId);
                 startActivity(intent);
             }
         });

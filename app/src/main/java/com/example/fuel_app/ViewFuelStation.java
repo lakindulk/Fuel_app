@@ -16,12 +16,17 @@ public class ViewFuelStation extends AppCompatActivity {
 
     ListView stationList;
     CustomBaseAdapter listAdapter;
-
+    String userid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_fuel_station);
 
+
+        Intent intent = this.getIntent();
+        if(intent != null){
+            userid = intent.getStringExtra("userId");
+        }
 
         stationList = (ListView) findViewById(R.id.customListView);
 
@@ -42,6 +47,7 @@ public class ViewFuelStation extends AppCompatActivity {
                         System.out.println("Clicked One:" + i);
                         Intent intent = new Intent(getApplicationContext(),Queue_home.class);
                         intent.putExtra("ID",stationModel.get(i).getId());
+                        intent.putExtra("userid",userid);
                         startActivity(intent);
                     }
                 });
