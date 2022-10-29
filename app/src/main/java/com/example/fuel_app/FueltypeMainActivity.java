@@ -40,7 +40,7 @@ public class FueltypeMainActivity extends AppCompatActivity {
         addstock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(FueltypeMainActivity.this, AddstockActivity.class));
+                startActivity(new Intent(FueltypeMainActivity.this, updateall.class));
             }
         });
 

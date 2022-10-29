@@ -69,7 +69,7 @@
         android:layout_width="323dp"
         android:layout_height="51dp"
         android:background="@drawable/button"
-        android:text="Add New Stock"
+        android:text="Update Stock"
         android:textColor="#FFF"
         android:textSize="18dp"
         android:textStyle="bold"

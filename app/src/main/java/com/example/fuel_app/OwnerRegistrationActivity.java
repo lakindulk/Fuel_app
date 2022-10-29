@@ -62,7 +62,7 @@ public class OwnerRegistrationActivity extends AppCompatActivity {
                 else{
                     Boolean checkUser = DB.checkusername(u_name);
                     if(checkUser == false){
-                        //postDataToDB(vnum,pw,v_type,f_type,chesis_n);
+                        postDataToDB(u_name,pw,s_name,r_num,cit);
                         Boolean insertSuccess = DB.insertData(u_name, pw);
                         if(insertSuccess == true){
                             Toast.makeText(OwnerRegistrationActivity.this, "User Registered Successfully !", Toast.LENGTH_SHORT).show();
@@ -84,7 +84,7 @@ public class OwnerRegistrationActivity extends AppCompatActivity {
     private void postDataToDB(String u_name, String pw, String s_name, String r_num, String cit ){
         try {
             // url to post the user data
-            String url = "http://192.168.1.11:8081/api/Customer";
+            String url = "http://172.20.10.5:8090/api/Owner";
             HashMap<String, String> params = new HashMap<String, String>();
             params.put("userName", u_name);
             params.put("password", pw);

@@ -10,17 +10,16 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-//this class is to handle all business logics
-public class ViewallActivity extends AppCompatActivity {
+
+public class updateall extends AppCompatActivity {
     ListView typeList;
     FuelTypeBasedAdapter listAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_viewall);
-
-        typeList=(ListView) findViewById(R.id.newListView);
-        FueltypeDetailsService fueltypeDetailsService=new FueltypeDetailsService(ViewallActivity.this);
+        setContentView(R.layout.activity_updateall);
+        typeList=(ListView) findViewById(R.id.newListViewUp);
+        FueltypeDetailsService fueltypeDetailsService=new FueltypeDetailsService(updateall.this);
         fueltypeDetailsService.getAllTypes(new FueltypeDetailsService.VolleyResponseListener() {
             @Override
             public void onResponse(ArrayList<FuelTypeModel> typeModel) {
@@ -33,8 +32,9 @@ public class ViewallActivity extends AppCompatActivity {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                         System.out.println("Clicked One"+i);
-                        Intent intent=new Intent(getApplicationContext(),ViewcountActivity.class);
-                        intent.putExtra("ID",typeModel.get(i).getStationID());
+                        Intent intent=new Intent(getApplicationContext(),AddstockActivity.class);
+                        intent.putExtra("ID",typeModel.get(i).getId());
+                        intent.putExtra("SID",typeModel.get(i).getStationID());
                         intent.putExtra("ATime",typeModel.get(i).getArrivalTime());
                         intent.putExtra("Pet92",typeModel.get(i).getPetrol92());
                         intent.putExtra("Pet95",typeModel.get(i).getPetrol95());
@@ -45,7 +45,7 @@ public class ViewallActivity extends AppCompatActivity {
                         intent.putExtra("ThreeW",typeModel.get(i).getNoOfThreeweel());
                         intent.putExtra("FourW",typeModel.get(i).getNoOfFourweel());
                         intent.putExtra("SixW",typeModel.get(i).getNoOfSixweel());
-
+                        intent.putExtra("ftype",typeModel.get(i).getFuelType());
                         startActivity(intent);
                     }
                 });
@@ -53,7 +53,7 @@ public class ViewallActivity extends AppCompatActivity {
 
             @Override
             public void onError(String message) {
-                Toast.makeText(ViewallActivity.this,message , Toast.LENGTH_LONG).show();
+                Toast.makeText(updateall.this,message , Toast.LENGTH_LONG).show();
 
             }
         });

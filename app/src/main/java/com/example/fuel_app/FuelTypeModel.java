@@ -60,7 +60,7 @@ public class FuelTypeModel {
                 '}';
     }
 
-    public String getId() {
+    public  String getId() {
         return id;
     }
     public String getPetrol92() {
@@ -71,7 +71,7 @@ public class FuelTypeModel {
         return fuelType;
     }
 
-    public String getArrivalTime() {
+    public  String getArrivalTime() {
         return arrivalTime;
     }
 

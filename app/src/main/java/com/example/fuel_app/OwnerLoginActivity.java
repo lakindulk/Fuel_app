@@ -2,6 +2,7 @@ package com.example.fuel_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,11 +13,12 @@ import android.widget.Toast;
 
 public class OwnerLoginActivity extends AppCompatActivity {
 
-    TextView signinbtn;
+    TextView signinbtn,logss;
     Button login;
     EditText username,password;
     private DBHelperOwner DB;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class OwnerLoginActivity extends AppCompatActivity {
         DB = new DBHelperOwner(this);
         username = findViewById(R.id.usern);
         password = findViewById(R.id.pa);
-
+        logss=findViewById(R.id.newlog);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,8 +44,8 @@ public class OwnerLoginActivity extends AppCompatActivity {
                 }
 
                 else{
-                    Boolean checkUser = DB.checkusername(unum);
-                    if(checkUser == false){
+                    Boolean checkUser = DB.checkusernamepassword(unum,pw);
+                    if(checkUser == true){
                         //postDataToDB(vnum,pw,v_type,f_type,chesis_n);
                         Boolean insertSuccess = DB.insertData(unum, pw);
                         if(insertSuccess == true){
@@ -53,6 +55,8 @@ public class OwnerLoginActivity extends AppCompatActivity {
                         }else {
                             Toast.makeText(OwnerLoginActivity.this, "Something went wrong !", Toast.LENGTH_SHORT).show();
                         }
+                    }else{
+                        Toast.makeText(OwnerLoginActivity.this, "Invalid user !", Toast.LENGTH_SHORT).show();
                     }
 
                 }
@@ -68,6 +72,12 @@ public class OwnerLoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        logss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentnew=new Intent(OwnerLoginActivity.this,FueltypeMainActivity.class);
+                        startActivity(intentnew);
+            }
+        });
     }
 }
