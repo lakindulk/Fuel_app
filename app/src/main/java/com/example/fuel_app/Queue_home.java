@@ -2,6 +2,7 @@ package com.example.fuel_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,9 +16,10 @@ import android.widget.Toast;
 import java.util.ArrayList;
 //this class is to handle all business logics
 public class Queue_home extends AppCompatActivity {
-    Button checkIn;
-    String id;
+    Button checkIn,checkOut;
+    String id,userID;
     TextView pet92, pet95, die, dieS,kero,arrTime;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,20 +36,22 @@ public class Queue_home extends AppCompatActivity {
         Intent intent = this.getIntent();
         if(intent != null){
             id = intent.getStringExtra("ID");
+            userID = intent.getStringExtra("userid");
         }
+
         System.out.println("id : " + id);
 
         StationDetailsService stationDataService = new StationDetailsService(Queue_home.this);
-        stationDataService.getFuelDetails(new StationDetailsService.UserDetailsResponseListener() {
+        stationDataService.getFuelDetails(new StationDetailsService.StationDetailsResponseListener() {
             @Override
             public void onResponse(StationDetailModel stationModel) {
                 System.out.println("station data : " + stationModel);
-//                ArrayAdapter arr = new ArrayAdapter(ViewFuelStation.this, android.R.layout.simple_list_item_1,stationModel.get());
-                    pet92.setText(stationModel.getPetrol92());
-                    pet95.setText(stationModel.getPetrol95());
-                    die.setText(stationModel.getDiesel());
-                    dieS.setText(stationModel.getSuperDiesel());
-                    arrTime.setText(stationModel.getArrivalTime());
+                System.out.println("pet92 : "+stationModel.getPetrol92().toString());
+                pet92.setText(stationModel.getPetrol92().toString());
+                pet95.setText(stationModel.getPetrol95().toString());
+                die.setText(stationModel.getDiesel().toString());
+                dieS.setText(stationModel.getSuperDiesel().toString());
+                arrTime.setText(stationModel.getArrivalTime().toString());
             }
 
             @Override
@@ -55,14 +59,34 @@ public class Queue_home extends AppCompatActivity {
                 Toast.makeText(Queue_home.this,message , Toast.LENGTH_LONG).show();
             }
         },id);
+        UserDetailsModel user = new UserDetailsModel();
+        StationUpdateModel updateModel = new StationUpdateModel();
+        System.out.println("user id : "+ userID);
+        stationDataService.getUserQueueDetails(new StationDetailsService.StationUpdateResponseListener() {
+            @Override
+            public void onResponse(StationUpdateModel stationModel) {
+                System.out.println("station data : " + stationModel);
+
+            }
+
+            @Override
+            public void onError(String message) {
+                Toast.makeText(Queue_home.this,message , Toast.LENGTH_LONG).show();
+            }
+        },userID);
 
 
         checkIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(updateModel.getCheckOutTime() =="string") {
+                    Intent intent = new Intent(Queue_home.this,Add_checkout_time.class);
+                    intent.putExtra("ID",id);
+                    startActivity(intent);
+                } else {
                 Intent intent = new Intent(Queue_home.this,Add_checkin_time.class);
                 intent.putExtra("ID",id);
-                startActivity(intent);
+                startActivity(intent);}
             }
         });
     }

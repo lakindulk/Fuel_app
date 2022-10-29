@@ -31,12 +31,16 @@ public class LoginActivity extends AppCompatActivity {
         vehicleLoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(LoginActivity.this,Home_Screen.class);
-                //startActivity(intent);
 
                 String vnum,pw;
                 vnum = vehiclenum.getText().toString();
                 pw = password.getText().toString();
+
+                UserDetailsModel user = new UserDetailsModel("635ac35022419d29c259a544","GA0690","car","petrol","62ubd78652g9272gsg788");
+
+                Intent intent2 = new Intent(LoginActivity.this, Home_Screen.class);
+                intent2.putExtra("user", user.getId());
+                startActivity(intent2);
 
                 if(vnum.equals("")|| pw.equals("")){
                     Toast.makeText(LoginActivity.this, "Required fields !!", Toast.LENGTH_SHORT).show();
@@ -49,7 +53,10 @@ public class LoginActivity extends AppCompatActivity {
                         Boolean insertSuccess = DB.insertData(vnum, pw);
                         if(insertSuccess == true){
                             Toast.makeText(LoginActivity.this, "User login Successfully !", Toast.LENGTH_SHORT).show();
+//                            UserDetailsModel user = new UserDetailsModel("635ac35022419d29c259a544","GA0690","car","petrol","62ubd78652g9272gsg788");
+
                             Intent intent1 = new Intent(LoginActivity.this, Home_Screen.class);
+
                             startActivity(intent1);
                         }else {
                             Toast.makeText(LoginActivity.this, "Something went wrong !", Toast.LENGTH_SHORT).show();

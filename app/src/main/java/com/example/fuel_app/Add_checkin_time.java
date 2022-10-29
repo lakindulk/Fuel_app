@@ -57,17 +57,20 @@ public class Add_checkin_time extends AppCompatActivity {
 
                 } else {
                     try {
-                        // url to post the user data
-                        String url = "http://192.168.1.4:8080/api/FuelQueueUpdate";
+                        UserDetailsModel user = new UserDetailsModel();
+                        System.out.println(
+                                "user id : " + user.getId()
+                        );// url to post the user data
+                        String url = "http://172.28.25.18:8080/api/FuelQueueUpdate";
 
                         HashMap<String, String> params = new HashMap<String, String>();
 
                         params.put("StationId", id);
-                        params.put("VehicleType", "Car");
+                        params.put("VehicleType", user.getVehicleType());
                         params.put("NoOfLiters", "");
                         params.put("CheckInTime", checkInTime.toString());
                         params.put("CheckOutTime", "");
-                        params.put("FuelType", "Petrol");
+                        params.put("FuelType", user.getFuelType());
 
                         JsonObjectRequest req = new JsonObjectRequest(url, new JSONObject(params),
                                 new Response.Listener<JSONObject>() {
