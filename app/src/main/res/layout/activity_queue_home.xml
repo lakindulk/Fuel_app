@@ -86,7 +86,7 @@
         android:id="@+id/checkInBtn"
         android:layout_width="222dp"
         android:layout_height="49dp"
-        android:text="Check-In/Check-out"
+        android:text="Add Queue Data"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"

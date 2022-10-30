@@ -25,9 +25,9 @@ import java.util.HashMap;
 //this class is to handle all business logics
 public class Add_checkin_time extends AppCompatActivity {
 
-    Editable checkInTime;
+    Editable checkInTime, noL, checkOutT;
     Button checkInBtn;
-    EditText cheinInTxt;
+    EditText cheinInTxt,noOfL, checkOut;
     private RequestQueue requestQueue;
     String id;
 
@@ -38,6 +38,8 @@ public class Add_checkin_time extends AppCompatActivity {
         setContentView(R.layout.activity_add_checkin_time);
 
         cheinInTxt = findViewById(R.id.addCheckInTime);
+        noOfL = findViewById(R.id.addNoOfLiter);
+        checkOut = findViewById(R.id.addcheckOutTime);
         checkInBtn = findViewById(R.id.addTime);
 
         Intent intent = this.getIntent();
@@ -51,6 +53,8 @@ public class Add_checkin_time extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 checkInTime = cheinInTxt.getText();
+                noL = noOfL.getText();
+                checkOutT = checkOut.getText();
 
                 if(checkInTime.equals("") ){
                     Toast.makeText(Add_checkin_time.this, "Enter Checkin time", Toast.LENGTH_SHORT).show();
@@ -60,16 +64,17 @@ public class Add_checkin_time extends AppCompatActivity {
                         UserDetailsModel user = new UserDetailsModel();
                         System.out.println(
                                 "user id : " + user.getId()
-                        );// url to post the user data
+                        );
+                        System.out.println("no of L" +  noL.toString());// url to post the user data
                         String url = "http://172.28.25.18:8080/api/FuelQueueUpdate";
 
                         HashMap<String, String> params = new HashMap<String, String>();
 
                         params.put("StationId", id);
                         params.put("VehicleType", user.getVehicleType());
-                        params.put("NoOfLiters", "");
+                        params.put("NoOfLiters", noL.toString());
                         params.put("CheckInTime", checkInTime.toString());
-                        params.put("CheckOutTime", "");
+                        params.put("CheckOutTime", checkOutT.toString());
                         params.put("FuelType", user.getFuelType());
 
                         JsonObjectRequest req = new JsonObjectRequest(url, new JSONObject(params),
@@ -92,8 +97,6 @@ public class Add_checkin_time extends AppCompatActivity {
                         requestQueue = Volley.newRequestQueue(Add_checkin_time.this);
                         requestQueue.add(req);
 
-                        Intent intent = new Intent(Add_checkin_time.this,Add_checkout_time.class);
-                        startActivity(intent);
 
                     }catch (Exception e){
 

@@ -74,20 +74,17 @@ public class Queue_home extends AppCompatActivity {
                 Toast.makeText(Queue_home.this,message , Toast.LENGTH_LONG).show();
             }
         },userID);
-
+        System.out.println("update model : "+updateModel.getCheckOutTime());
 
         checkIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(updateModel.getCheckOutTime() =="string") {
-                    Intent intent = new Intent(Queue_home.this,Add_checkout_time.class);
-                    intent.putExtra("ID",id);
-                    startActivity(intent);
-                } else {
+
                 Intent intent = new Intent(Queue_home.this,Add_checkin_time.class);
                 intent.putExtra("ID",id);
                 startActivity(intent);}
-            }
+
         });
+
     }
 }
