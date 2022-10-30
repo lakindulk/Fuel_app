@@ -44,21 +44,18 @@ public class OwnerLoginActivity extends AppCompatActivity {
                 }
 
                 else{
-                    Boolean checkUser = DB.checkusernamepassword(unum,pw);
-                    if(checkUser == true){
-                        //postDataToDB(vnum,pw,v_type,f_type,chesis_n);
-                        Boolean insertSuccess = DB.insertData(unum, pw);
-                        if(insertSuccess == true){
-                            Toast.makeText(OwnerLoginActivity.this, "Owner Login Successfully !", Toast.LENGTH_SHORT).show();
-                            Intent intent1 = new Intent(OwnerLoginActivity.this, FueltypeMainActivity.class);
-                            startActivity(intent1);
-                        }else {
-                            Toast.makeText(OwnerLoginActivity.this, "Something went wrong !", Toast.LENGTH_SHORT).show();
-                        }
-                    }else{
-                        Toast.makeText(OwnerLoginActivity.this, "Invalid user !", Toast.LENGTH_SHORT).show();
+                    Boolean validStatus = DB.checkusernamepassword(unum, pw);
+                    if (validStatus == true)
+                    {
+                        Toast.makeText(OwnerLoginActivity.this, "User login Successfully !", Toast.LENGTH_SHORT).show();
+                        Intent intent1 = new Intent(OwnerLoginActivity.this, FueltypeMainActivity.class);
+                        intent1.putExtra("IDD",unum);
+                        Global.getInstance().setData(unum);
+                        startActivity(intent1);
                     }
-
+                    else {
+                        Toast.makeText(OwnerLoginActivity.this, "Something went wrong !", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
@@ -76,6 +73,7 @@ public class OwnerLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentnew=new Intent(OwnerLoginActivity.this,FueltypeMainActivity.class);
+
                         startActivity(intentnew);
             }
         });
