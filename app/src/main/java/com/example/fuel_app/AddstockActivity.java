@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 public class AddstockActivity extends AppCompatActivity {
     String id,sid;
-    private EditText station_id,arrival_time,petrol92,petrol95,diesel,superdiesal,finish;
-    String atime,p92,p95,d,sd,end,two,three,four,six,fftype;
+    private EditText station_id,arrival_time,petrol92,petrol95,diesel,superdiesal,finish,Twowheel,threewheel,fourwheel,Sixewheel;
+    String atime,p92,p95,d,sd,end,twoe,threee,foure,sixe,fftype;
     private Button addstock;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,11 @@ public class AddstockActivity extends AppCompatActivity {
         superdiesal=findViewById(R.id.superdiesel);
         finish=findViewById(R.id.finishtime);
         addstock=findViewById(R.id.addstock);
+        Twowheel=findViewById(R.id.Twowheel);
+        threewheel=findViewById(R.id.threewheel);
+        fourwheel=findViewById(R.id.fourwheel);
+        Sixewheel=findViewById(R.id.Sixewheel);
+
         Intent intent = this.getIntent();
         if(intent != null){
             id = intent.getStringExtra("ID");
@@ -37,10 +42,10 @@ public class AddstockActivity extends AppCompatActivity {
             d = intent.getStringExtra("Dies");
             sd = intent.getStringExtra("SuperDies");
             end = intent.getStringExtra("EndTime");
-            two=intent.getStringExtra("TwoW");
-            three=intent.getStringExtra("ThreeW");
-            four=intent.getStringExtra("FourW");
-            six=intent.getStringExtra("SixW");
+            twoe=intent.getStringExtra("TwoW");
+            threee=intent.getStringExtra("ThreeW");
+            foure=intent.getStringExtra("FourW");
+            sixe=intent.getStringExtra("SixW");
             fftype=intent.getStringExtra("ftype");
         }
         System.out.println("id : " + sid);
@@ -51,6 +56,10 @@ public class AddstockActivity extends AppCompatActivity {
         diesel.setText(d);
         superdiesal.setText(sd);
         finish.setText(end);
+        Twowheel.setText(twoe);
+        threewheel.setText(threee);
+        fourwheel.setText(foure);
+        Sixewheel.setText(sixe);
 
         addstock.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +71,10 @@ public class AddstockActivity extends AppCompatActivity {
                 String Diesel=diesel.getText().toString();
                 String SupDiesel=superdiesal.getText().toString();
                 String Finish=finish.getText().toString();
+                String two=Twowheel.getText().toString();
+                String three=threewheel.getText().toString();
+                String four=fourwheel.getText().toString();
+                String six=Sixewheel.getText().toString();
 
                 FueltypeDetailsService fueltypeDetailsService=new FueltypeDetailsService(AddstockActivity.this);
                 fueltypeDetailsService.updateFuelType(new FueltypeDetailsService.VolleyResponseListenerUpdatetypeData() {

@@ -36,11 +36,11 @@
         app:layout_constraintVertical_bias="0.418" />
 
     <EditText
-        android:id="@+id/noOfFourweel"
+        android:id="@+id/stationID"
         android:layout_width="303dp"
         android:layout_height="53dp"
         android:background="@drawable/forget"
-        android:hint="Number Of Four Weels"
+        android:hint="Station ID"
         android:paddingLeft="20dp"
         android:textColor="#95120a"
         android:textSize="18dp"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <EditText
         android:id="@+id/noOfSixweel"
@@ -65,7 +65,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.342" />
+        app:layout_constraintVertical_bias="0.447" />
+
+    <EditText
+        android:id="@+id/noOffourweel"
+        android:layout_width="303dp"
+        android:layout_height="53dp"
+        android:background="@drawable/forget"
+        android:hint="No Of four Weel"
+        android:paddingLeft="20dp"
+        android:textColor="#95120a"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.265" />
 
     <EditText
         android:id="@+id/noOfThreeweel"
@@ -81,7 +97,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.532" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <EditText
         android:id="@+id/noOfTwoweel"
@@ -97,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.723" />
+        app:layout_constraintVertical_bias="0.799" />
 
     <Button
         android:id="@+id/addcount"
@@ -113,7 +129,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.911" />
+        app:layout_constraintVertical_bias="0.949" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

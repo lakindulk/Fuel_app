@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void postDataToDB(String vnum, String pw, String v_type, String f_type, String chesis_n ){
         try {
             // url to post the user data
-            String url = "http://172.20.10.5:8090/api/User";
+            String url = "http://172.28.1.50:8080/api/User";
             HashMap<String, String> params = new HashMap<String, String>();
             params.put("vehicleNb", vnum);
             params.put("password", pw);

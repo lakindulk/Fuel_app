@@ -84,7 +84,7 @@
         android:layout_width="323dp"
         android:layout_height="51dp"
         android:background="@drawable/button"
-        android:text="Add Daily Vechicle Count"
+        android:text="Add Station"
         android:textColor="#FFF"
         android:textSize="18dp"
         android:textStyle="bold"

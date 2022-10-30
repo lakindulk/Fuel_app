@@ -42,12 +42,15 @@ public class OwnerLoginActivity extends AppCompatActivity {
                 if(unum.equals("")|| pw.equals("")){
                     Toast.makeText(OwnerLoginActivity.this, "You should fill all fields !!", Toast.LENGTH_SHORT).show();
                 }
+
                 else{
                     Boolean validStatus = DB.checkusernamepassword(unum, pw);
                     if (validStatus == true)
                     {
                         Toast.makeText(OwnerLoginActivity.this, "User login Successfully !", Toast.LENGTH_SHORT).show();
-                        Intent intent1 = new Intent(OwnerLoginActivity.this, Home_Screen.class);
+                        Intent intent1 = new Intent(OwnerLoginActivity.this, FueltypeMainActivity.class);
+                        intent1.putExtra("IDD",unum);
+                        Global.getInstance().setData(unum);
                         startActivity(intent1);
                     }
                     else {
@@ -70,6 +73,7 @@ public class OwnerLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentnew=new Intent(OwnerLoginActivity.this,FueltypeMainActivity.class);
+
                         startActivity(intentnew);
             }
         });

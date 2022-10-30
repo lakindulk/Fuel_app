@@ -44,22 +44,28 @@ public class FueltypeDetailsService {
                     for (int i = 0; i < response.length(); i++) {
                         FuelTypeModel typeModel = new FuelTypeModel();
                         JSONObject first_data = (JSONObject) response.get(i);
-                        System.out.println("Type r" + first_data);
-                        typeModel.setId(first_data.getString("id"));
-                        typeModel.setStationID(first_data.getString("stationID"));
+                        String data=Global.getInstance().getData().toString();
                         typeModel.setFuelType(first_data.getString("fuelType"));
-                        typeModel.setPetrol92(first_data.getString("petrol92"));
-                        typeModel.setPetrol95(first_data.getString("petrol95"));
-                        typeModel.setDiesel(first_data.getString("diesel"));
-                        typeModel.setSuperDiesel(first_data.getString("superDiesel"));
-                        typeModel.setArrivalTime(first_data.getString("arrivalTime"));
-                        typeModel.setFinishTime(first_data.getString("finishTime"));
-                        typeModel.setNoOfFourweel(first_data.getString("noOfFourweel"));
-                        typeModel.setNoOfThreeweel(first_data.getString("noOfThreeweel"));
-                        typeModel.setNoOfTwoweel(first_data.getString("noOfTwoweel"));
-                        typeModel.setNoOfSixweel(first_data.getString("noOfSixweel"));
+                        String owner = typeModel.getFuelType();
+                        if(data.equals(owner)){
+                            System.out.println("Type r" + first_data);
+                            typeModel.setId(first_data.getString("id"));
+                            typeModel.setStationID(first_data.getString("stationID"));
+                            typeModel.setFuelType(first_data.getString("fuelType"));
+                            typeModel.setPetrol92(first_data.getString("petrol92"));
+                            typeModel.setPetrol95(first_data.getString("petrol95"));
+                            typeModel.setDiesel(first_data.getString("diesel"));
+                            typeModel.setSuperDiesel(first_data.getString("superDiesel"));
+                            typeModel.setArrivalTime(first_data.getString("arrivalTime"));
+                            typeModel.setFinishTime(first_data.getString("finishTime"));
+                            typeModel.setNoOfFourweel(first_data.getString("noOfFourweel"));
+                            typeModel.setNoOfThreeweel(first_data.getString("noOfThreeweel"));
+                            typeModel.setNoOfTwoweel(first_data.getString("noOfTwoweel"));
+                            typeModel.setNoOfSixweel(first_data.getString("noOfSixweel"));
 
-                        fuelTypeList.add(typeModel);
+                            fuelTypeList.add(typeModel);
+                        }
+
                     }
                     volleyResponseListener.onResponse(fuelTypeList);
                 } catch (JSONException e) {
