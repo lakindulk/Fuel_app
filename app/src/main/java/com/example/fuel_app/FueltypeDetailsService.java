@@ -1,12 +1,15 @@
 package com.example.fuel_app;
 
 import android.content.Context;
+import android.provider.Settings;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
@@ -16,20 +19,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 // this service is to manage api requests in fuel type api
 public class FueltypeDetailsService {
-Context context;
+    Context context;
 
     public FueltypeDetailsService(Context context){this.context=context;}
+
+
+
 
     public interface VolleyResponseListener{
         void onResponse(ArrayList<FuelTypeModel> typeModels);
         void onError(String message);
     }
-
+//Get All Data
     public void getAllTypes(VolleyResponseListener volleyResponseListener){
         System.out.println("Get All Fuel Type");
         ArrayList<FuelTypeModel> fuelTypeList = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(context);
-        String url ="http://192.168.1.5:8090/api/FuelTypeUpdate";
+        String url ="http://172.28.1.50:8080/api/FuelTypeUpdate";
         JsonArrayRequest request =new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
@@ -70,6 +76,67 @@ Context context;
         });
         queue.add(request);
     }
+
+//Update Fuel data
+public interface VolleyResponseListenerUpdatetypeData{
+    void onResponse(String msg);
+    void onError(String message);
+}
+    public void updateFuelType(VolleyResponseListenerUpdatetypeData done_updating, String id, String stationID, String arrive, String fftype, String four, String six, String three, String two, String petrol92, String petrol95, String diesel, String supDiesel, String finish) {
+        RequestQueue queue=Volley.newRequestQueue(context);
+        System.out.println(stationID);
+        String url="http://172.28.1.50:8080/api/FuelTypeUpdate/"+id+"?stationID="+stationID+"&arrivalTime="+arrive+"&fuelType="+fftype+"&noOfFourweel="+four+"&noOfSixweel="+six+"&noOfThreeweel="+three+"&noOfTwoweel="+two+"&petrol92="+petrol92+"&petrol95="+petrol95+"&diesel="+diesel+"&superDiesel="+supDiesel+"&finishTime="+finish;
+        System.out.println("vs");
+
+        StringRequest putRequest=new StringRequest(Request.Method.PUT, url,
+
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("bhghgvhs"+response);
+
+                        done_updating.onResponse(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("Error :"+error);
+                        done_updating.onError("Error in Updating Fuel Types");
+                    }
+                }
+
+        );
+        queue.add(putRequest);
+    }
+    /*public void updateFuelType(VolleyResponseListenerUpdatetypeData updateFuelTypeResponseListener,String id, String stationID, String arrive, String fftype, String four, String six, String three, String two, String petrol92, String petrol95, String diesel, String supDiesel, String finish){
+
+        RequestQueue queue=Volley.newRequestQueue(context);
+        System.out.println(stationID);
+        String url="http://172.28.1.50:8090/api/FuelTypeUpdate/"+id+"?stationID="+stationID+"&arrivalTime="+arrive+"&fuelType="+fftype+"&noOfFourweel="+four+"&noOfSixweel="+six+"&noOfThreeweel="+three+"&noOfTwoweel="+two+"&petrol92="+petrol92+"&petrol95="+petrol95+"&diesel="+diesel+"&superDiesel="+supDiesel+"&finishTime="+finish;
+        System.out.println("vs");
+
+        StringRequest putRequest=new StringRequest(Request.Method.PUT, url,
+
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println("bhghgvhs");
+
+                        updateFuelTypeResponseListener.onResponse(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println("Error :"+error);
+                        updateFuelTypeResponseListener.onError("Error in Updating Fuel Types");
+                    }
+                }
+
+        );
+        queue.add(putRequest);
+    }*/
 
 
 }

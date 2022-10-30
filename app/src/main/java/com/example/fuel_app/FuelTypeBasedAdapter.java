@@ -27,9 +27,9 @@ public class FuelTypeBasedAdapter extends ArrayAdapter<FuelTypeModel> {
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.activity_fueltype_listview,parent,false);
         }
-        System.out.println("station Name : " + model.getStationID());
+        System.out.println("station Name : " + model.getArrivalTime());
         TextView stationName = convertView.findViewById(R.id.newfuelview);
-        stationName.setText(model.getStationID()+"-"+model.getFuelType() );
+        stationName.setText(model.getArrivalTime()+"-"+model.getFinishTime() );
         return convertView;
 
     }

@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                 else{
                     Boolean checkUser = DB.checkusername(vnum);
                     if(checkUser == false){
-                        //postDataToDB(vnum,pw,v_type,f_type,chesis_n);
+                       postDataToDB(vnum,pw,v_type,f_type,chesis_n);
                         Boolean insertSuccess = DB.insertData(vnum, pw);
                         if(insertSuccess == true){
                             Toast.makeText(RegisterActivity.this, "User Registered Successfully !", Toast.LENGTH_SHORT).show();
@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void postDataToDB(String vnum, String pw, String v_type, String f_type, String chesis_n ){
         try {
             // url to post the user data
-            String url = "http://192.168.1.11:8081/api/Customer";
+            String url = "http://172.20.10.5:8090/api/User";
             HashMap<String, String> params = new HashMap<String, String>();
             params.put("vehicleNb", vnum);
             params.put("password", pw);
